@@ -9,6 +9,10 @@
   }
   h2 {
     @apply font-gelasio;
+    @apply text-title-mobile;
+  }
+  h3 {
+    @apply font-gelasio;
     @apply text-chapter;
   }
   nav {

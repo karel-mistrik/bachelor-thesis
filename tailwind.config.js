@@ -13,6 +13,7 @@ module.exports = {
     },
     fontSize: {
       title: "10rem",
+      "title-mobile": "4rem",
       navigation: "0.75rem",
       chapter: "1.25rem",
       text: "0.938rem",
