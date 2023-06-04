@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply font-gelasio;
+    @apply text-title;
+  }
+  h2 {
+    @apply font-gelasio;
+    @apply text-chapter;
+  }
+  nav {
+    @apply font-gelasio;
+    @apply text-navigation;
+  }
+  p {
+    @apply font-inter;
+    @apply text-text;
+  }
+}
