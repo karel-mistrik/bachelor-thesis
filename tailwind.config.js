@@ -18,7 +18,11 @@ module.exports = {
       chapter: "1.25rem",
       text: "0.938rem",
     },
-    extend: {},
+    extend: {
+      lineHeight: {
+        title: "89.6%",
+      },
+    },
   },
   plugins: [],
 };

@@ -4,23 +4,21 @@
 
 @layer base {
   h1 {
-    @apply font-gelasio;
-    @apply text-title;
+    @apply font-gelasio text-title leading-title;
   }
   h2 {
-    @apply font-gelasio;
-    @apply text-title-mobile;
+    @apply font-gelasio text-title-mobile leading-title;
   }
   h3 {
-    @apply font-gelasio;
-    @apply text-chapter;
+    @apply font-gelasio text-chapter;
   }
   nav {
-    @apply font-gelasio;
-    @apply text-navigation;
+    @apply font-gelasio text-navigation;
   }
   p {
-    @apply font-inter;
-    @apply text-text;
+    @apply font-inter text-text;
+  }
+  section {
+    @apply h-screen w-full shrink-0 snap-start;
   }
 }
