@@ -15,6 +15,7 @@ module.exports = {
       title: "10rem",
       "title-mobile": "4rem",
       navigation: "0.75rem",
+      "navigation-mobile": "1.25rem",
       chapter: "1.25rem",
       text: "0.938rem",
     },

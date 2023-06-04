@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply font-gelasio text-title leading-title;
+    @apply font-gelasio text-title-mobile leading-title lg:text-title;
   }
   h2 {
     @apply font-gelasio text-title-mobile leading-title;
@@ -13,12 +13,21 @@
     @apply font-gelasio text-chapter;
   }
   nav {
-    @apply font-gelasio text-navigation;
+    @apply font-gelasio text-navigation-mobile xl:text-navigation;
+  }
+  li {
+    @apply relative xl:max-w-[142px] xl:text-center;
   }
   p {
     @apply font-inter text-text;
   }
   section {
-    @apply h-screen w-full shrink-0 snap-start;
+    @apply h-screen w-full shrink-0 snap-start bg-background p-10 xl:[&:not(:first-child)]:pt-[10rem];
+  }
+}
+
+@layer utilities {
+  .xl-nav-divider {
+    @apply mb-1 h-[1px] w-[52px] bg-primary;
   }
 }

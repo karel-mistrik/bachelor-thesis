@@ -11,24 +11,253 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../dist/output.css" rel="stylesheet" />
+    <script src="./script.js" defer></script>
   </head>
-  <body>
+  <body class="overflow-y-hidden">
+    <!-- NAVIGAITON DESKTOP -->
+    <nav class="fixed left-0 right-0 top-10 mx-auto hidden xl:block">
+      <ul class="flex items-center justify-center space-x-4">
+        <li>
+          <a href="#scienceMajor">VĚDECKÉ ZAMĚŘENÍ</a>
+        </li>
+        <div class="xl-nav-divider"></div>
+        <li>
+          <a href="#education">VZDĚLÁNÍ</a>
+        </li>
+        <div class="xl-nav-divider"></div>
+        <li>
+          <a href="#employment">ZAMĚSTNÁNÍ</a>
+        </li>
+        <div class="xl-nav-divider"></div>
+        <li>
+          <a href="#achivements">DOSAŽENÉ ÚSPĚCHY VYBRANÉ AKTIVITY</a>
+        </li>
+        <div class="xl-nav-divider"></div>
+        <li>
+          <a href="#project">ÚČAST NA PROJEKTECH</a>
+        </li>
+        <div class="xl-nav-divider"></div>
+        <li>
+          <a href="#referee">OPONENTNÍ POSUDKY ÚČAST V KOMISÍCH</a>
+        </li>
+        <div class="xl-nav-divider"></div>
+        <li>
+          <a href="#gallery">GALERIE</a>
+        </li>
+        <div class="xl-nav-divider"></div>
+        <li>
+          <a href="#contact">KONTAKT</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- NAVIGATION SCREEN -->
+    <div
+      class="absolute top-full z-10 flex h-screen w-screen items-center bg-background"
+      id="navigationScreen"
+    >
+      <nav>
+        <ul class="ml-10 space-y-3 lg:ml-16 lg:space-y-6">
+          <li>
+            <a href="#scienceMajor">VĚDECKÉ ZAMĚŘENÍ</a>
+          </li>
+          <li>
+            <a href="#education">VZDĚLÁNÍ</a>
+          </li>
+          <li>
+            <a href="#employment">ZAMĚSTNÁNÍ</a>
+          </li>
+          <li>
+            <a href="#achivements">DOSAŽENÉ ÚSPĚCHY & VYBRANÉ AKTIVITY</a>
+          </li>
+          <li>
+            <a href="#project">ÚČAST NA PROJEKTECH</a>
+          </li>
+          <li>
+            <a href="#referee">OPONENTNÍ POSUDKY & ÚČAST V KOMISÍCH</a>
+          </li>
+          <li>
+            <a href="#gallery">GALERIE</a>
+          </li>
+          <li>
+            <a href="#contact">KONTAKT</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- NAVIGATION OPEN -->
+    <img
+      src="../assets/menu-open.svg"
+      alt="menu toggle circle"
+      class="absolute right-10 top-10 z-20 block lg:h-[33px] lg:w-[33px] xl:hidden"
+      id="navToggleOpen"
+    />
+
+    <!-- NAVIGATION CLOSE -->
+    <img
+      src="../assets/menu-close.svg"
+      alt="menu toggle circle"
+      class="absolute right-10 top-10 z-20 hidden lg:h-[33px] lg:w-[33px] xl:hidden"
+      id="navToggleClose"
+    />
+
+    <!-- SECTIONS CONTAINER -->
     <main
-      class="flex h-screen w-full snap-x snap-mandatory overflow-scroll"
+      class="flex h-screen w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll"
     >
       <!-- LANDING PAGE -->
-      <section class="flex justify-center items-center">
+      <section id="landingPage" class="flex items-center justify-center">
         <div class="relative">
-          <div class="absolute top-0 bottom-0 m-auto left-0 border-2 lg:border-4 border-secondary h-[130%]"></div>
-          <h2 class="ml-6 lg:hidden">Jan <br/> Mistrík</h2>
-          <h1 class="ml-10 hidden lg:block">Jan <br/> Mistrík</h1>
+          <div
+            class="absolute bottom-0 left-0 top-0 m-auto h-[130%] border-2 border-secondary lg:border-4"
+          ></div>
+          <h1 class="ml-6 lg:ml-10">
+            Jan <br />
+            Mistrík
+          </h1>
         </div>
-        
       </section>
-      <!-- LANDING PAGE END -->
-      <section>2</section>
-      <section>3</section>
-      <section>4</section>
-    </div>
+
+      <!-- SCIENCE MAJOR PAGE -->
+      <section id="scienceMajor">
+        <div
+          href="#arcticle1"
+          onclick="scrollToDiv('#arcticle1', '#container')"
+        >
+          1
+        </div>
+        <div
+          href="#arcticle2"
+          onclick="scrollToDiv('#arcticle2', '#container')"
+        >
+          2
+        </div>
+
+        <div class="max-h-full max-w-md overflow-y-scroll" id="container">
+          <p id="arcticle1">
+            Radwimps formed in 2001 in Kanagawa, Japan during their first year
+            of high school.[1][13] The five original members had been friends
+            since middle school.[14] Lead vocalist Yojiro Noda first became
+            interested in music after hearing Oasis in middle school, when he
+            would try to remember the guitar chords and sing to Oasis
+            songs.[13][15] The band's activities were initially centred on
+            Yokohama,[1] and their first performance took place on BB Street in
+            Kannai district on 5 February 2002.[15] At this point, guitarist
+            Akira Kuwahara dropped out of high school in order to focus on the
+            band.[15] In September and August 2002, Radwimps partook in the
+            Yokohama High School Music Festival and eventually won the grand
+            prize for the competition with the song "Moshi mo".[16] "Moshi mo"
+            was released as the band's debut single in May 2003, with 10,000
+            copies pressed and sold for 100 yen each.[14] Following this single,
+            Radwimps toured the Yokohama area, including a performance as the
+            sole act at Yokohama's Club 24West.[15] The band released their
+            debut album, Radwimps, in July through independent label Newtraxx,
+            featuring songs they wrote in middle school. The following August,
+            was finalized by the end of the year and released in March.[15]
+            Directly after the release, the group departed on a five-month
+            Radwimps Haruna Tour (はるなっTOUR) and also performed at
+            high-profile summer music festivals, such as Setstock, Rock in
+            Japan, and Summer Sonic.[14][15] During this time, the band released
+            a third single, "Hexun / Kanashi", which was their first charting
+            release.[17] In November, the band made their major debut under
+            Toshiba EMI, with the single "Nijūgoko-me no Senshokutai",[14]
+            followed by "EDP (Tonde Hi ni Iru Natsu no Kimi)" in January, both
+            of which rose to the top 50.[17] In shifting to a major label, Noda
+            explained that the band took the same stance as they had as an
+            independent group, and that "If we thought we were bigger on a major
+            label, that would have been a big mistake".[13][18] The band's third
+            and first major-label album, Radwimps 3: Mujintō ni Motte
+            Ikiwasureta Ichimai, regraded 3 in March 2006, was a landmark in
+            establishing their popularity, debuting at number 13 on Oricon's
+            album charts.[17] Radwimps 3 saw a change in the band's musical
+            style, allowing them to be more experimental in their after
+          </p>
+          <p id="arcticle2">
+            a guest appearance at the Yokohama High School Music Festival, the
+            band went on hiatus for Noda and other members to focus on their
+            school exams.[13] Radwimps returned from hiatus in March 2004,
+            though Kei Asō, Yūsuke Saiki, and Akio Shibafumi did not rejoin the
+            group. To replace the musicians, the band added acquaintances, such
+            as drummer Satoshi Yamaguchi and bassist Yusuke Takeda.[14][15]
+            Radwimps immediately began recording new songs, and by July had
+            released a second single, "Kiseki", and performed a three-month
+            Japan-wide tour.[1][15] Right after the end of the tour, the band
+            started work on their second album, Radwimps 2: Hatten Tojō, which
+            was finalized by the end of the year and released in March.[15]
+            Directly after the release, the group departed on a five-month
+            Radwimps Haruna Tour (はるなっTOUR) and also performed at
+            high-profile summer music festivals, such as Setstock, Rock in
+            Japan, and Summer Sonic.[14][15] During this time, the band released
+            a third single, "Hexun / Kanashi", which was their first charting
+            release.[17] In November, the band made their major debut under
+            Toshiba EMI, with the single "Nijūgoko-me no Senshokutai",[14]
+            followed by "EDP (Tonde Hi ni Iru Natsu no Kimi)" in January, both
+            of which rose to the top 50.[17] In shifting to a major label, Noda
+            explained that the band took the same stance as they had as an
+            independent group, and that "If we thought we were bigger on a major
+            label, that would have been a big mistake".[13][18] The band's third
+            and first major-label album, Radwimps 3: Mujintō ni Motte
+            Ikiwasureta Ichimai, regraded 3 in March 2006, was a landmark in
+            establishing their popularity, debuting at number 13 on Oricon's
+            album charts.[17] Radwimps 3 saw a change in the band's musical
+            style, allowing them to be more experimental in their was finalized
+            by the end of the year and released in March.[15] Directly after the
+            release, the group departed on a five-month Radwimps Haruna Tour
+            (はるなっTOUR) and also performed at high-profile summer music
+            festivals, such as Setstock, Rock in Japan, and Summer
+            Sonic.[14][15] During this time, the band released a third single,
+            "Hexun / Kanashi", which was their first charting release.[17] In
+            November, the band made their major debut under Toshiba EMI, with
+            the single "Nijūgoko-me no Senshokutai",[14] followed by "EDP (Tonde
+            Hi ni Iru Natsu no Kimi)" in January, both of which rose to the top
+            50.[17] In shifting to a major label, Noda explained that the band
+            took the same stance as they had as an independent group, and that
+            "If we thought we were bigger on a major label, that would have been
+            a big mistake".[13][18] The band's third and first major-label
+            album, Radwimps 3: Mujintō ni Motte Ikiwasureta Ichimai, regraded 3
+            in March 2006, was a landmark in establishing their popularity,
+            debuting at number 13 on Oricon's album charts.[17] Radwimps 3 saw a
+            change in the band's musical style, allowing them to be more
+            experimental in their
+          </p>
+        </div>
+      </section>
+
+      <!-- EDUCATION PAGE -->
+      <section id="education">
+        <h2>education</h2>
+      </section>
+
+      <!-- EMPLYMENT PAGE -->
+      <section id="employment">
+        <h2>employment</h2>
+      </section>
+
+      <!-- ACHIVEMENTS PAGE -->
+      <section id="achivements">
+        <h2>achivements</h2>
+      </section>
+
+      <!-- PROJECT PAGE -->
+      <section id="project">
+        <h2>project</h2>
+      </section>
+
+      <!-- REFEREE PAGE -->
+      <section id="referee">
+        <h2>referee</h2>
+      </section>
+
+      <!-- GALLERY PAGE -->
+      <section id="gallery">
+        <h2>gallery</h2>
+      </section>
+
+      <!-- CONTACT PAGE -->
+      <section id="contact">
+        <h2>contact</h2>
+      </section>
+    </main>
   </body>
 </html>
