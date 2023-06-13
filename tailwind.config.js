@@ -18,6 +18,7 @@ module.exports = {
       "navigation-mobile": "1.25rem",
       chapter: "1.25rem",
       text: "0.938rem",
+      subchapter: "0.75rem",
     },
     extend: {
       lineHeight: {
