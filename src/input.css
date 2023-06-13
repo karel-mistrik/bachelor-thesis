@@ -25,7 +25,7 @@
     @apply font-inter text-text;
   }
   section {
-    @apply h-screen w-full shrink-0 snap-start bg-background p-10 xl:[&:not(:first-child)]:pt-[10rem];
+    @apply flex h-screen w-full shrink-0 snap-start flex-col bg-background p-10 xl:[&:not(:first-child)]:pt-[10rem];
   }
 }
 
@@ -37,6 +37,24 @@
     @apply my-[10px] h-[2px] w-full bg-secondary;
   }
   .subchapters {
-    @apply flex gap-[10px];
+    @apply mt-[10px] flex flex-grow gap-[10px] overflow-x-scroll;
+  }
+  .subchapters > h4 {
+    @apply w-fit whitespace-nowrap;
+  }
+  .chapter-heading {
+    @apply h-[30%];
+  }
+  .chapter-content {
+    @apply h-[70%] space-y-[15px] overflow-y-scroll;
+  }
+  .chapter-content > .list {
+    @apply space-y-[10px];
+  }
+  .list > div {
+    @apply relative pl-[20px] before:absolute before:-top-[1px] before:left-0 before:block before:content-['※'];
+  }
+  .list-item {
+    @apply relative pl-[20px] before:absolute before:-top-[1px] before:left-0 before:block before:content-['※'];
   }
 }

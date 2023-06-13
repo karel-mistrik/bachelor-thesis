@@ -478,10 +478,12 @@ p {
 }
 
 section {
+  display: flex;
   height: 100vh;
   width: 100%;
   flex-shrink: 0;
   scroll-snap-align: start;
+  flex-direction: column;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding: 2.5rem;
@@ -666,6 +668,10 @@ section {
   display: flex;
 }
 
+.list-item {
+  display: list-item;
+}
+
 .hidden {
   display: none;
 }
@@ -678,28 +684,12 @@ section {
   height: 100vh;
 }
 
-.max-h-full {
-  max-height: 100%;
-}
-
-.max-h-\[80\$\] {
-  max-height: 80$;
-}
-
-.max-h-\[80\%\] {
-  max-height: 80%;
-}
-
 .w-full {
   width: 100%;
 }
 
 .w-screen {
   width: 100vw;
-}
-
-.max-w-full {
-  max-width: 100%;
 }
 
 .snap-x {
@@ -730,22 +720,12 @@ section {
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
-.space-y-\[10px\] > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(10px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(10px * var(--tw-space-y-reverse));
-}
-
 .overflow-y-hidden {
   overflow-y: hidden;
 }
 
 .overflow-x-scroll {
   overflow-x: scroll;
-}
-
-.overflow-y-scroll {
-  overflow-y: scroll;
 }
 
 .border-2 {
@@ -788,8 +768,69 @@ section {
 }
 
 .subchapters {
+  margin-top: 10px;
   display: flex;
+  flex-grow: 1;
   gap: 10px;
+  overflow-x: scroll;
+}
+
+.subchapters > h4 {
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.chapter-heading {
+  height: 30%;
+}
+
+.chapter-content {
+  height: 70%;
+}
+
+.chapter-content > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(15px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(15px * var(--tw-space-y-reverse));
+}
+
+.chapter-content {
+  overflow-y: scroll;
+}
+
+.chapter-content > .list > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(10px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(10px * var(--tw-space-y-reverse));
+}
+
+.list > div {
+  position: relative;
+  padding-left: 20px;
+}
+
+.list > div::before {
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  display: block;
+  --tw-content: '※';
+  content: var(--tw-content);
+}
+
+.list-item {
+  position: relative;
+  padding-left: 20px;
+}
+
+.list-item::before {
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  display: block;
+  --tw-content: '※';
+  content: var(--tw-content);
 }
 
 @media (min-width: 1024px) {
