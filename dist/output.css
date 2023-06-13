@@ -450,6 +450,7 @@ h3 {
 }
 
 h4 {
+  cursor: pointer;
   font-family: Gelasio, serif;
   font-size: 0.75rem;
 }
@@ -467,6 +468,15 @@ nav {
 
 li {
   position: relative;
+  cursor: pointer;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+li:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
 }
 
 @media (min-width: 1280px) {

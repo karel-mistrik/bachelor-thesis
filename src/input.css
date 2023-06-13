@@ -17,13 +17,13 @@
     @apply font-gelasio text-chapter;
   }
   h4 {
-    @apply font-gelasio text-subchapter;
+    @apply cursor-pointer font-gelasio text-subchapter;
   }
   nav {
     @apply font-gelasio text-navigation-mobile xl:text-navigation;
   }
   li {
-    @apply relative xl:max-w-[142px] xl:text-center;
+    @apply relative cursor-pointer transition-colors duration-300 hover:text-secondary xl:max-w-[142px] xl:text-center;
   }
   p {
     @apply font-inter text-text;
