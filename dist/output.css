@@ -422,6 +422,10 @@ video {
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-family: Gelasio, serif;
   font-size: 4rem;
@@ -487,6 +491,16 @@ section {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  section {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.5rem;
+    padding-top: 180px;
+    padding-bottom: 180px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -750,6 +764,16 @@ section {
   font-style: italic;
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
 .xl-nav-divider {
   margin-bottom: 0.25rem;
   height: 1px;
@@ -772,13 +796,25 @@ section {
   display: flex;
   flex-grow: 1;
   gap: 10px;
-  overflow-x: scroll;
+  overflow-x: auto;
+}
+
+@media (min-width: 1024px) {
+  .subchapters {
+    flex-direction: column;
+  }
 }
 
 .subchapters > h4 {
   width: -moz-fit-content;
   width: fit-content;
   white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .chapter-heading {
+    max-width: 250px;
+  }
 }
 
 .chapter-content > :not([hidden]) ~ :not([hidden]) {
@@ -789,6 +825,12 @@ section {
 
 .chapter-content {
   overflow-y: scroll;
+}
+
+@media (min-width: 1024px) {
+  .chapter-content {
+    width: 560px;
+  }
 }
 
 .chapter-content > .list > :not([hidden]) ~ :not([hidden]) {
@@ -832,6 +874,14 @@ section {
 
   .lg\:ml-16 {
     margin-left: 4rem;
+  }
+
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:hidden {
+    display: none;
   }
 
   .lg\:h-\[33px\] {

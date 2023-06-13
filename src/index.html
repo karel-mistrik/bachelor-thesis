@@ -18,69 +18,77 @@
     <nav class="fixed left-0 right-0 top-10 mx-auto hidden xl:block">
       <ul class="flex items-center justify-center space-x-4">
         <li>
-          <a href="#scienceMajor">VĚDECKÉ ZAMĚŘENÍ</a>
+          <a onclick="scrollAr('scienceMajor')">VĚDECKÉ ZAMĚŘENÍ</a>
         </li>
         <div class="xl-nav-divider"></div>
         <li>
-          <a href="#education">VZDĚLÁNÍ</a>
+          <a onclick="scrollAr('education')">VZDĚLÁNÍ</a>
         </li>
         <div class="xl-nav-divider"></div>
         <li>
-          <a href="#employment">ZAMĚSTNÁNÍ</a>
+          <a onclick="scrollAr('employment')">ZAMĚSTNÁNÍ</a>
         </li>
         <div class="xl-nav-divider"></div>
         <li>
-          <a href="#achivements">DOSAŽENÉ ÚSPĚCHY VYBRANÉ AKTIVITY</a>
+          <a onclick="scrollAr('achivements')"
+            >DOSAŽENÉ ÚSPĚCHY VYBRANÉ AKTIVITY</a
+          >
         </li>
         <div class="xl-nav-divider"></div>
         <li>
-          <a href="#project">ÚČAST NA PROJEKTECH</a>
+          <a onclick="scrollAr('project')">ÚČAST NA PROJEKTECH</a>
         </li>
         <div class="xl-nav-divider"></div>
         <li>
-          <a href="#referee">OPONENTNÍ POSUDKY ÚČAST V KOMISÍCH</a>
+          <a onclick="scrollAr('referee')"
+            >OPONENTNÍ POSUDKY ÚČAST V KOMISÍCH</a
+          >
         </li>
         <div class="xl-nav-divider"></div>
         <li>
-          <a href="#gallery">GALERIE</a>
+          <a onclick="scrollAr('gallery')">GALERIE</a>
         </li>
         <div class="xl-nav-divider"></div>
         <li>
-          <a href="#contact">KONTAKT</a>
+          <a onclick="scrollAr('contact')">KONTAKT</a>
         </li>
       </ul>
     </nav>
 
     <!-- NAVIGATION SCREEN -->
     <div
-      class="absolute top-full z-10 flex h-screen w-screen items-center bg-background"
+      class="absolute top-full z-10 flex h-screen w-screen items-center bg-background transition-all duration-500"
       id="navigationScreen"
     >
       <nav>
         <ul class="ml-10 space-y-3 lg:ml-16 lg:space-y-6">
           <li>
-            <a href="#scienceMajor">VĚDECKÉ ZAMĚŘENÍ</a>
+            <a onclick="scrollAr('scienceMajor')">VĚDECKÉ ZAMĚŘENÍ</a>
           </li>
           <li>
-            <a href="#education">VZDĚLÁNÍ</a>
+            <a onclick="scrollAr('education')">VZDĚLÁNÍ</a>
           </li>
           <li>
-            <a href="#employment">ZAMĚSTNÁNÍ</a>
+            <a onclick="scrollAr('employment')">ZAMĚSTNÁNÍ</a>
           </li>
           <li>
-            <a href="#achivements">DOSAŽENÉ ÚSPĚCHY & VYBRANÉ AKTIVITY</a>
+            <a onclick="scrollAr('achivements')"
+              >DOSAŽENÉ ÚSPĚCHY VYBRANÉ AKTIVITY</a
+            >
           </li>
           <li>
-            <a href="#project">ÚČAST NA PROJEKTECH</a>
+            <a onclick="scrollAr('project')">ÚČAST NA PROJEKTECH</a>
           </li>
           <li>
-            <a href="#referee">OPONENTNÍ POSUDKY & ÚČAST V KOMISÍCH</a>
+            <a onclick="scrollAr('referee')"
+              >OPONENTNÍ POSUDKY ÚČAST V KOMISÍCH</a
+            >
           </li>
           <li>
-            <a href="#gallery">GALERIE</a>
+            <a onclick="scrollAr('gallery')">GALERIE</a>
           </li>
           <li>
-            <a href="#contact">KONTAKT</a>
+            <a onclick="scrollAr('contact')">KONTAKT</a>
           </li>
         </ul>
       </nav>
@@ -140,12 +148,13 @@
       <section id="education">
         <div class="chapter-heading">
           <h3>VZDĚLÁNÍ</h3>
+          <div class="chapter-underline hidden lg:block"></div>
           <div class="subchapters">
             <h4 onclick="scrollToDiv('#mgr', '#education-container')">Mgr.</h4>
             <h4 onclick="scrollToDiv('#phd', '#education-container')">Ph.D.</h4>
             <h4 onclick="scrollToDiv('#dr', '#education-container')">Dr.</h4>
           </div>
-          <div class="chapter-underline"></div>
+          <div class="chapter-underline lg:hidden"></div>
         </div>
         <div class="chapter-content" id="education-container">
           <div id="mgr">
@@ -198,6 +207,7 @@
       <section id="employment">
         <div class="chapter-heading">
           <h3>ZAMĚSTNÁNÍ</h3>
+          <div class="chapter-underline hidden lg:block"></div>
           <div class="subchapters">
             <h4 onclick="scrollToDiv('#one', '#employment-container')">
               2002 - 2006
@@ -215,7 +225,7 @@
               2015 - dosud
             </h4>
           </div>
-          <div class="chapter-underline"></div>
+          <div class="chapter-underline lg:hidden"></div>
         </div>
         <div class="chapter-content" id="employment-container">
           <div id="one">
@@ -316,6 +326,7 @@
       <section id="achivements">
         <div class="chapter-heading">
           <h3>DOSAŽENÉ ÚSPĚCHY & VYBRANÉ AKTIVITY</h3>
+          <div class="chapter-underline hidden lg:block"></div>
           <div class="subchapters">
             <h4 onclick="scrollToDiv('#awards', '#achivements-container')">
               Ocenění
@@ -334,7 +345,7 @@
               Profesní aktivity (výběr)
             </h4>
           </div>
-          <div class="chapter-underline"></div>
+          <div class="chapter-underline lg:hidden"></div>
         </div>
         <div class="chapter-content" id="achivements-container">
           <div id="awards" class="list">
@@ -440,6 +451,7 @@
       <section id="project">
         <div class="chapter-heading">
           <h3>ÚČAST NA PROJEKTECH</h3>
+          <div class="chapter-underline hidden lg:block"></div>
           <div class="subchapters">
             <h4 onclick="scrollToDiv('#specialization', '#project-container')">
               Odborné projekty
@@ -451,7 +463,7 @@
               Ostatní odborné projekty
             </h4>
           </div>
-          <div class="chapter-underline"></div>
+          <div class="chapter-underline lg:hidden"></div>
         </div>
         <div class="chapter-content" id="project-container">
           <div id="specialization" class="list">
@@ -558,30 +570,31 @@
       <section id="referee">
         <div class="chapter-heading">
           <h3>OPONENTNÍ POSUDKY & ÚČAST V KOMISÍCH</h3>
+          <div class="chapter-underline hidden lg:block"></div>
           <div class="subchapters">
-            <h4 onclick="scrollToDiv('#one', '#referee-container')">
+            <h4 onclick="scrollToDiv('#projects', '#referee-container')">
               Oponentní posudky projektů
             </h4>
-            <h4 onclick="scrollToDiv('#two', '#referee-container')">
+            <h4 onclick="scrollToDiv('#international', '#referee-container')">
               Účast v PhD komisích v zahraničí
             </h4>
-            <h4 onclick="scrollToDiv('#three', '#referee-container')">
+            <h4 onclick="scrollToDiv('#template', '#referee-container')">
               Oponentní posudky návrhu PhD prací
             </h4>
-            <h4 onclick="scrollToDiv('#four', '#referee-container')">
+            <h4 onclick="scrollToDiv('#work', '#referee-container')">
               Oponentní posudky PhD prací
             </h4>
-            <h4 onclick="scrollToDiv('#five', '#referee-container')">
+            <h4 onclick="scrollToDiv('#selection', '#referee-container')">
               Rigorózní řízení (výběr)
             </h4>
-            <h4 onclick="scrollToDiv('#six', '#referee-container')">
+            <h4 onclick="scrollToDiv('#diploma', '#referee-container')">
               Oponentní posudky diplomových prací
             </h4>
           </div>
-          <div class="chapter-underline"></div>
+          <div class="chapter-underline lg:hidden"></div>
         </div>
         <div class="chapter-content" id="referee-container">
-          <div id="one" class="list">
+          <div id="projects" class="list">
             <h3>Oponentní posudky projektů</h3>
             <div>
               Projekt "Realizace vrstevnatých systémů s požadovanými
@@ -604,7 +617,7 @@
               optický přístroj. Zadavatel: Akademická rada AV ČR, 2008.
             </div>
           </div>
-          <div id="two" class="list">
+          <div id="international" class="list">
             <h3>Účast v PhD komisích v zahraničí</h3>
             <div>
               Bruno Berini, \emph{Elaboration de couches minces de
@@ -615,7 +628,7 @@
               Francie, zkoušející (examinateur).
             </div>
           </div>
-          <div id="three" class="list">
+          <div id="template" class="list">
             <h3>Oponentní posudky návrhu PhD prací</h3>
             <div>
               Václav Petrák, \emph{Study of growth, doping and properties of
@@ -629,7 +642,7 @@
               Fakulta biomedicínského inže\-nýr\-ství, Kladno, oponent.
             </div>
           </div>
-          <div id="four" class="list">
+          <div id="work" class="list">
             <h3>Oponentní posudky PhD prací, účast v PhD komisích a SDZ</h3>
             <div>
               Leontýna Šlégrová, SDZ, 11/2021, Univerzita Hradec Králové,
@@ -666,7 +679,7 @@
               učení technické v Brně, Fakulta chemická, oponent.
             </div>
           </div>
-          <div id="five" class="list">
+          <div id="selection" class="list">
             <h3>Rigorózní řízení (výběr)</h3>
             <div>
               Jiří Záhora, \emph{Výukové programy se zaměřením na lékařskou
@@ -687,7 +700,7 @@
               12/2017, Univerzita Hradec Králové, Přírodovědecká fakulta.
             </div>
           </div>
-          <div id="six" class="list">
+          <div id="diploma" class="list">
             <h3>Oponentní posudky diplomových prací</h3>
             <div>
               Michal Kurka, \emph{Strukturování tenkých vrstev chalkogenidového
@@ -767,9 +780,11 @@
 
       <!-- CONTACT PAGE -->
       <section id="contact">
-        <h3>Kontakt</h3>
-        <div class="chapter-underline"></div>
-        <div>
+        <div class="chapter-heading">
+          <h3>Kontakt</h3>
+          <div class="chapter-underline"></div>
+        </div>
+        <div class="chapter-content">
           Centrum materiálů a nanotechnologí & Ústav aplikované fyziky a
           matematiky Fakulta chemicko-technologická, Univerzita Pardubice
           Studentská 95, 532 10, Pardubice, Česká republika +420-466-037-409,

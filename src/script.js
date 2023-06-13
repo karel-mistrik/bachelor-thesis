@@ -50,3 +50,9 @@ const scrollToDiv = (targetEl, targetContainer) => {
     behavior: "smooth",
   });
 };
+
+const scrollAr = (targetEl) => {
+  const textElement = document.getElementById(targetEl);
+
+  textElement.scrollIntoView({ behavior: "smooth" });
+};

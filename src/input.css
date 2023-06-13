@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   h1 {
     @apply font-gelasio text-title-mobile leading-title lg:text-title;
   }
@@ -25,7 +29,7 @@
     @apply font-inter text-text;
   }
   section {
-    @apply flex h-screen w-full shrink-0 snap-start flex-col bg-background p-10 xl:[&:not(:first-child)]:pt-[10rem];
+    @apply flex h-screen w-full shrink-0 snap-start flex-col bg-background p-10 lg:flex-row lg:justify-center lg:gap-10 lg:py-[180px] xl:[&:not(:first-child)]:pt-[10rem];
   }
 }
 
@@ -37,14 +41,16 @@
     @apply my-[10px] h-[2px] w-full bg-secondary;
   }
   .subchapters {
-    @apply mt-[10px] flex flex-grow gap-[10px] overflow-x-scroll;
+    @apply mt-[10px] flex flex-grow gap-[10px] overflow-x-auto lg:flex-col;
   }
   .subchapters > h4 {
     @apply w-fit whitespace-nowrap;
   }
-
+  .chapter-heading {
+    @apply lg:max-w-[250px];
+  }
   .chapter-content {
-    @apply space-y-[15px] overflow-y-scroll;
+    @apply space-y-[15px] overflow-y-scroll lg:w-[560px];
   }
   .chapter-content > .list {
     @apply space-y-[10px];
