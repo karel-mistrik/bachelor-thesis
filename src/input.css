@@ -42,11 +42,9 @@
   .subchapters > h4 {
     @apply w-fit whitespace-nowrap;
   }
-  .chapter-heading {
-    @apply h-[30%];
-  }
+
   .chapter-content {
-    @apply h-[70%] space-y-[15px] overflow-y-scroll;
+    @apply space-y-[15px] overflow-y-scroll;
   }
   .chapter-content > .list {
     @apply space-y-[10px];

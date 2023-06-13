@@ -781,14 +781,6 @@ section {
   white-space: nowrap;
 }
 
-.chapter-heading {
-  height: 30%;
-}
-
-.chapter-content {
-  height: 70%;
-}
-
 .chapter-content > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(15px * calc(1 - var(--tw-space-y-reverse)));
