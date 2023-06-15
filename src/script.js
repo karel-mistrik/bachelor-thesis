@@ -3,6 +3,9 @@ const navToggleClose = document.querySelector("#navToggleClose");
 
 const naviagtionScreenItems = document.querySelectorAll("#navigationScreen a");
 
+const galleryImages = document.querySelectorAll(".chapter-gallery > img");
+const imagePreview = document.querySelector("#imagePreview");
+
 const navigationScreen = document.querySelector("#navigationScreen");
 
 const sections = document.querySelector("section");
@@ -60,3 +63,24 @@ window.addEventListener("wheel", function (e) {
   horizontal = e.currentTarget.scrollLeft;
   vertical = e.currentTarget.scrollTop;
 });
+
+galleryImages.forEach((image) => {
+  image.addEventListener("click", async (e) => {
+    imagePreview.style.backgroundImage = `url("${e.target.src}")`;
+    imagePreview.classList.remove("scale-0");
+    imagePreview.classList.add("scale-100");
+  });
+});
+
+imagePreview.addEventListener("click", () => {
+  imagePreview.classList.remove("scale-100");
+  imagePreview.classList.add("scale-0");
+});
+
+const loadImg = function (img, url) {
+  return new Promise((resolve, reject) => {
+    img.style.backgroundImage = `url("${url}")`;
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(img);
+  });
+};

@@ -52,6 +52,9 @@
   .chapter-content {
     @apply space-y-[15px] overflow-y-scroll pt-2 lg:w-[560px] lg:pt-0;
   }
+  .chapter-gallery {
+    @apply flex space-x-[15px] overflow-x-scroll lg:w-[560px] lg:pt-0;
+  }
   .chapter-content > .list {
     @apply space-y-[10px];
   }
