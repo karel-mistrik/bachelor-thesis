@@ -453,6 +453,14 @@ h4 {
   cursor: pointer;
   font-family: Gelasio, serif;
   font-size: 0.75rem;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+h4:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
 }
 
 nav {
@@ -794,7 +802,6 @@ section {
 
 .chapter-underline {
   margin-top: 10px;
-  margin-bottom: 10px;
   height: 2px;
   width: 100%;
   --tw-bg-opacity: 1;
@@ -835,11 +842,13 @@ section {
 
 .chapter-content {
   overflow-y: scroll;
+  padding-top: 0.5rem;
 }
 
 @media (min-width: 1024px) {
   .chapter-content {
     width: 560px;
+    padding-top: 0px;
   }
 }
 

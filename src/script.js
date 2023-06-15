@@ -53,6 +53,10 @@ const scrollToDiv = (targetEl, targetContainer) => {
 
 const scrollAr = (targetEl) => {
   const textElement = document.getElementById(targetEl);
-
   textElement.scrollIntoView({ behavior: "smooth" });
 };
+
+window.addEventListener("wheel", function (e) {
+  horizontal = e.currentTarget.scrollLeft;
+  vertical = e.currentTarget.scrollTop;
+});
