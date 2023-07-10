@@ -17,45 +17,59 @@
   <body class="overflow-y-hidden">
     <div
       id="imagePreview"
-      class="absolute left-0 right-0 top-0 m-auto h-full scale-0 bg-contain bg-center bg-no-repeat transition-all duration-500"
+      class="absolute left-0 right-0 top-0 z-50 m-auto h-full scale-0 bg-contain bg-center bg-no-repeat transition-all duration-500"
     ></div>
 
     <!-- NAVIGAITON DESKTOP -->
     <nav class="fixed left-0 right-0 top-10 mx-auto hidden xl:block">
       <ul class="flex items-center justify-center space-x-4">
-        <li>
+        <li id="scienceMajorLink">
           <a onclick="scrollAr('scienceMajor')">VĚDECKÉ ZAMĚŘENÍ</a>
         </li>
+
         <div class="xl-nav-divider"></div>
-        <li>
+
+        <li id="educationLink">
           <a onclick="scrollAr('education')">VZDĚLÁNÍ</a>
         </li>
+
         <div class="xl-nav-divider"></div>
-        <li>
+
+        <li id="employmentLink">
           <a onclick="scrollAr('employment')">ZAMĚSTNÁNÍ</a>
         </li>
+
         <div class="xl-nav-divider"></div>
-        <li>
+
+        <li id="achivementsLink">
           <a onclick="scrollAr('achivements')"
             >DOSAŽENÉ ÚSPĚCHY VYBRANÉ AKTIVITY</a
           >
         </li>
+
         <div class="xl-nav-divider"></div>
-        <li>
+
+        <li id="projectLink">
           <a onclick="scrollAr('project')">ÚČAST NA PROJEKTECH</a>
         </li>
+
         <div class="xl-nav-divider"></div>
-        <li>
+
+        <li id="refereeLink">
           <a onclick="scrollAr('referee')"
             >OPONENTNÍ POSUDKY ÚČAST V KOMISÍCH</a
           >
         </li>
+
         <div class="xl-nav-divider"></div>
-        <li>
+
+        <li id="galleryLink">
           <a onclick="scrollAr('gallery')">GALERIE</a>
         </li>
+
         <div class="xl-nav-divider"></div>
-        <li>
+
+        <li id="contactLink">
           <a onclick="scrollAr('contact')">KONTAKT</a>
         </li>
       </ul>
@@ -68,32 +82,32 @@
     >
       <nav>
         <ul class="ml-10 space-y-3 lg:ml-16 lg:space-y-6">
-          <li>
+          <li id="scienceMajorMobileLink">
             <a onclick="scrollAr('scienceMajor')">VĚDECKÉ ZAMĚŘENÍ</a>
           </li>
-          <li>
+          <li id="educationMobileLink">
             <a onclick="scrollAr('education')">VZDĚLÁNÍ</a>
           </li>
-          <li>
+          <li id="employmentMobileLink">
             <a onclick="scrollAr('employment')">ZAMĚSTNÁNÍ</a>
           </li>
-          <li>
+          <li id="achivementsMobileLink">
             <a onclick="scrollAr('achivements')"
               >DOSAŽENÉ ÚSPĚCHY VYBRANÉ AKTIVITY</a
             >
           </li>
-          <li>
+          <li id="projectMobileLink">
             <a onclick="scrollAr('project')">ÚČAST NA PROJEKTECH</a>
           </li>
-          <li>
+          <li id="refereeMobileLink">
             <a onclick="scrollAr('referee')"
               >OPONENTNÍ POSUDKY ÚČAST V KOMISÍCH</a
             >
           </li>
-          <li>
+          <li id="galleryMobileLink">
             <a onclick="scrollAr('gallery')">GALERIE</a>
           </li>
-          <li>
+          <li id="contactMobileLink">
             <a onclick="scrollAr('contact')">KONTAKT</a>
           </li>
         </ul>
@@ -787,24 +801,34 @@
         </div>
         <div class="chapter-gallery" id="gallery-container">
           <img
-            src="../assets/image.png"
-            alt="image"
-            class="h-full w-1/3 object-cover"
+            class="h-auto max-w-full rounded-lg"
+            src="../assets//gallery/ellipsometer.webp"
+            alt=""
           />
           <img
-            src="../assets/image.jpg"
-            alt="image"
-            class="h-full w-1/3 object-cover"
+            class="h-auto max-w-full rounded-lg"
+            src="../assets//gallery/ellipsometerOLD.webp"
+            alt=""
           />
           <img
-            src="../assets/image3.webp"
-            alt="image"
-            class="h-full w-1/3 object-cover"
+            class="h-auto max-w-full rounded-lg"
+            src="../assets//gallery/radio.webp"
+            alt=""
           />
           <img
-            src="../assets/image4.webp"
-            alt="image"
-            class="h-full w-1/3 object-cover"
+            class="h-auto max-w-full rounded-lg"
+            src="../assets//gallery/ellipsometer.webp"
+            alt=""
+          />
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src="../assets//gallery/ellipsometerOLD.webp"
+            alt=""
+          />
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src="../assets//gallery/radio.webp"
+            alt=""
           />
         </div>
       </section>

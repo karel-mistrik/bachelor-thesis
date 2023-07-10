@@ -68,12 +68,12 @@ galleryImages.forEach((image) => {
   image.addEventListener("click", async (e) => {
     imagePreview.style.backgroundImage = `url("${e.target.src}")`;
     imagePreview.classList.remove("scale-0");
-    imagePreview.classList.add("scale-100");
+    imagePreview.classList.add("scale-50");
   });
 });
 
 imagePreview.addEventListener("click", () => {
-  imagePreview.classList.remove("scale-100");
+  imagePreview.classList.remove("scale-50");
   imagePreview.classList.add("scale-0");
 });
 
@@ -84,3 +84,31 @@ const loadImg = function (img, url) {
     img.onerror = () => reject(img);
   });
 };
+
+const headings = document.querySelectorAll(".chapter-heading > h3");
+const headingsNav = document.querySelectorAll("nav > ul > li");
+
+let options = {
+  rootMargin: "0px",
+  threshold: 0,
+};
+
+let callback = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting && entry.target.innerHTML) {
+      headingsNav.forEach((nav) => {
+        if (nav.id.includes(entry.target.parentElement.parentElement.id)) {
+          nav.style.color = "red";
+        } else {
+          nav.style.color = "black";
+        }
+      });
+    }
+  });
+};
+
+let observer = new IntersectionObserver(callback, options);
+
+headings.forEach((heading) => {
+  observer.observe(heading);
+});

@@ -23,7 +23,10 @@
     @apply font-gelasio text-navigation-mobile xl:text-navigation;
   }
   li {
-    @apply relative cursor-pointer transition-colors duration-300 hover:text-secondary xl:max-w-[142px] xl:text-center;
+    @apply relative cursor-pointer transition-colors xl:max-w-[142px] xl:text-center;
+  }
+  a {
+    @apply duration-300 hover:text-secondary;
   }
   p {
     @apply font-inter text-text;
@@ -53,7 +56,10 @@
     @apply space-y-[15px] overflow-y-scroll pt-2 lg:w-[560px] lg:pt-0;
   }
   .chapter-gallery {
-    @apply flex space-x-[15px] overflow-x-scroll lg:w-[560px] lg:pt-0;
+    @apply grid grid-cols-1 gap-4 overflow-y-scroll sm:grid-cols-2 lg:max-w-[1000px] lg:pt-0;
+  }
+  .chapter-gallery img {
+    @apply h-full w-full object-cover;
   }
   .chapter-content > .list {
     @apply space-y-[10px];
