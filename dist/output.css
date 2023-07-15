@@ -727,10 +727,6 @@ section {
   height: 130%;
 }
 
-.h-auto {
-  height: auto;
-}
-
 .h-full {
   height: 100%;
 }
@@ -749,10 +745,6 @@ section {
 
 .w-screen {
   width: 100vw;
-}
-
-.max-w-full {
-  max-width: 100%;
 }
 
 .scale-0 {
@@ -783,10 +775,10 @@ section {
   justify-content: center;
 }
 
-.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+.space-x-7 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
-  margin-right: calc(1rem * var(--tw-space-x-reverse));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(1.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-3 > :not([hidden]) ~ :not([hidden]) {
@@ -795,22 +787,12 @@ section {
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
-.space-x-7 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1.75rem * var(--tw-space-x-reverse));
-  margin-left: calc(1.75rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .overflow-y-hidden {
   overflow-y: hidden;
 }
 
 .overflow-x-scroll {
   overflow-x: scroll;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
 }
 
 .border-2 {
@@ -920,30 +902,28 @@ section {
 }
 
 .chapter-gallery {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 1rem;
+  scroll-snap-type: y var(--tw-scroll-snap-strictness);
+  --tw-scroll-snap-strictness: mandatory;
   overflow-y: scroll;
-}
-
-@media (min-width: 640px) {
-  .chapter-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 1024px) {
   .chapter-gallery {
     max-width: 1000px;
-    padding-top: 0px;
   }
 }
 
-.chapter-gallery img {
-  height: 100%;
+.chapter-gallery > .chapter-gallery-image {
+  margin-bottom: 0.5rem;
+  height: 95%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  scroll-snap-align: center;
+  overflow: hidden;
+}
+
+.chapter-gallery > .chapter-gallery-image > img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .chapter-content > .list > :not([hidden]) ~ :not([hidden]) {

@@ -37,6 +37,11 @@
 }
 
 @layer utilities {
+  .masonry {
+    column-gap: 1.5em;
+    column-count: 1;
+  }
+
   .xl-nav-divider {
     @apply mb-1 h-[1px] w-[52px] bg-primary;
   }
@@ -56,10 +61,13 @@
     @apply space-y-[15px] overflow-y-scroll pt-2 lg:w-[560px] lg:pt-0;
   }
   .chapter-gallery {
-    @apply grid grid-cols-1 gap-4 overflow-y-scroll sm:grid-cols-2 lg:max-w-[1000px] lg:pt-0;
+    @apply snap-y snap-mandatory overflow-y-scroll lg:max-w-[1000px];
   }
-  .chapter-gallery img {
-    @apply h-full w-full object-cover;
+  .chapter-gallery > .chapter-gallery-image {
+    @apply mb-2 h-[95%] w-full snap-center overflow-hidden;
+  }
+  .chapter-gallery > .chapter-gallery-image > img {
+    @apply object-contain;
   }
   .chapter-content > .list {
     @apply space-y-[10px];
