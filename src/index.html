@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,6 +15,13 @@
     <title>Jan Mistrík</title>
   </head>
   <body class="overflow-y-hidden">
+    <!-- <div
+      id="progressBarContainer"
+      class="absolute left-0 right-0 top-0 h-1 w-full bg-primary"
+    >
+      <div id="progressBar" class="h-full w-0 bg-secondary"></div>
+    </div> -->
+
     <div
       id="imagePreview"
       class="absolute left-0 right-0 top-0 z-50 m-auto h-full scale-0 bg-contain bg-center bg-no-repeat transition-all duration-500"
@@ -22,24 +29,18 @@
 
     <!-- NAVIGAITON DESKTOP -->
     <nav class="fixed left-0 right-0 top-10 mx-auto hidden xl:block">
-      <ul class="flex items-center justify-center space-x-4">
+      <ul class="relative flex items-center justify-center space-x-7">
         <li id="scienceMajorLink">
           <a onclick="scrollAr('scienceMajor')">VĚDECKÉ ZAMĚŘENÍ</a>
         </li>
-
-        <div class="xl-nav-divider"></div>
 
         <li id="educationLink">
           <a onclick="scrollAr('education')">VZDĚLÁNÍ</a>
         </li>
 
-        <div class="xl-nav-divider"></div>
-
         <li id="employmentLink">
           <a onclick="scrollAr('employment')">ZAMĚSTNÁNÍ</a>
         </li>
-
-        <div class="xl-nav-divider"></div>
 
         <li id="achivementsLink">
           <a onclick="scrollAr('achivements')"
@@ -47,13 +48,9 @@
           >
         </li>
 
-        <div class="xl-nav-divider"></div>
-
         <li id="projectLink">
           <a onclick="scrollAr('project')">ÚČAST NA PROJEKTECH</a>
         </li>
-
-        <div class="xl-nav-divider"></div>
 
         <li id="refereeLink">
           <a onclick="scrollAr('referee')"
@@ -61,13 +58,9 @@
           >
         </li>
 
-        <div class="xl-nav-divider"></div>
-
         <li id="galleryLink">
           <a onclick="scrollAr('gallery')">GALERIE</a>
         </li>
-
-        <div class="xl-nav-divider"></div>
 
         <li id="contactLink">
           <a onclick="scrollAr('contact')">KONTAKT</a>
@@ -178,7 +171,7 @@
         </div>
         <div class="chapter-content" id="education-container">
           <div id="mgr">
-            <time>1998</time>
+            <div>1998</div>
             <div class="font-bold">
               Matematicko-fyzikální fakulta, Univerzita Karlova, Česká republika
             </div>
@@ -191,7 +184,7 @@
             <div>Konzultanti: Dr. Miroslav Nývlt, Mgr. Radek Lopušník</div>
           </div>
           <div id="phd">
-            <time>2002</time>
+            <div>2002</div>
             <div class="font-bold">
               Université de Versailles-Saint-Quentin en Yvelines, Versailles,
               Francie
@@ -208,7 +201,7 @@
             <div>Vedoucí práce: Prof. Štefan Višňovský, Dr. Marcel Guyot</div>
           </div>
           <div id="dr">
-            <time>2003</time>
+            <div>2003</div>
             <div class="font-bold">
               Matematicko-fyzikální fakulta, Univerzita Karlova, Česká republika
             </div>
@@ -249,7 +242,7 @@
         </div>
         <div class="chapter-content" id="employment-container">
           <div id="one">
-            <time>2002 - 2006</time>
+            <div>2002 - 2006</div>
             <div class="font-bold">Assistant professor</div>
             <div>
               Charakterizační a aplikační laboratoř nanostruktur - Výzkumný
@@ -271,7 +264,7 @@
             </div>
           </div>
           <div id="two">
-            <time>2007 - 2014</time>
+            <div>2007 - 2014</div>
             <div class="font-bold">Vědecký pracovník</div>
             <div>ELLA-CS s.r.o, výrobce speciální zdravotnické techniky</div>
             <div class="list-item">
@@ -285,7 +278,7 @@
             </div>
           </div>
           <div id="three">
-            <time>2006 - dosud</time>
+            <div>2006 - dosud</div>
             <div class="font-bold">Odborný asistent</div>
             <div>
               Ústav aplikované fyziky a matematiky - Fakulta
@@ -309,7 +302,7 @@
             </div>
           </div>
           <div id="four">
-            <time>2015 - 2017</time>
+            <div>2015 - 2017</div>
             <div class="font-bold">Vědecký pracovník</div>
             <div>
               Ústav fyzikální elektroniky, Přírodovědecká fakulta, Masarykova
@@ -323,7 +316,7 @@
             </div>
           </div>
           <div id="five">
-            <time>2015 - dosud</time>
+            <div>2015 - dosud</div>
             <div class="font-bold">Vědecký pracovník</div>
             <div>
               Centrum materiálů a nanotechnologií (CEMNAT) - Fakulta

@@ -23,7 +23,7 @@
     @apply font-gelasio text-navigation-mobile xl:text-navigation;
   }
   li {
-    @apply relative cursor-pointer transition-colors xl:max-w-[142px] xl:text-center;
+    @apply relative cursor-pointer transition-colors xl:text-center;
   }
   a {
     @apply duration-300 hover:text-secondary;

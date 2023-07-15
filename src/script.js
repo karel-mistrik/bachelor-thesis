@@ -112,3 +112,51 @@ let observer = new IntersectionObserver(callback, options);
 headings.forEach((heading) => {
   observer.observe(heading);
 });
+
+// GLOBAL PROGRESS BAR
+// const scrollContainer = document.querySelector("main");
+
+// scrollContainer.addEventListener("scroll", (evt) => {
+//   console.log(
+//     scrollContainer.scrollLeft /
+//       (scrollContainer.scrollWidth - scrollContainer.clientWidth)
+//   );
+//   document.querySelector("#progressBar").style.width = `${
+//     (scrollContainer.scrollLeft /
+//       (scrollContainer.scrollWidth - scrollContainer.clientWidth)) *
+//     100
+//   }%`;
+// });
+
+const contents = document.querySelectorAll(".chapter-content");
+
+contents.forEach((content) => {
+  if (content.clientHeight < content.scrollHeight) {
+    if (content.scrollTop === 0) {
+      content.style.borderBottom = "2px solid black";
+    }
+  }
+});
+
+contents.forEach((content) => {
+  content.addEventListener("scroll", (evt) => {
+    if (content.clientHeight < content.scrollHeight) {
+      if (content.scrollTop === 0) {
+        content.style.borderTop = "0 solid black";
+        content.style.borderBottom = "2px solid black";
+      } else if (
+        content.scrollHeight - content.clientHeight ===
+        content.scrollTop
+      ) {
+        content.style.borderTop = "2px solid black";
+        content.style.borderBottom = "0 solid black";
+      } else if (
+        content.scrollTop !== 0 &&
+        content.scrollHeight - content.clientHeight !== content.scrollTop
+      ) {
+        content.style.borderTop = "2px solid black";
+        content.style.borderBottom = "2px solid black";
+      }
+    }
+  });
+});
