@@ -20,7 +20,7 @@
     @apply cursor-pointer font-gelasio text-subchapter transition-colors duration-300 hover:text-secondary;
   }
   nav {
-    @apply font-gelasio text-navigation-mobile xl:text-navigation;
+    @apply font-gelasio text-navigation-mobile uppercase xl:text-navigation;
   }
   li {
     @apply relative cursor-pointer transition-colors xl:text-center;
@@ -40,6 +40,15 @@
   .grid-auto-rows-max-content {
     grid-auto-rows: max-content;
   }
+  .navigation-hint {
+    @apply font-inter text-navigation;
+  }
+  .legend-item {
+    @apply items-baseline;
+  }
+  .desktop-navigation-example {
+    @apply font-gelasio text-navigation uppercase;
+  }
 
   .xl-nav-divider {
     @apply mb-1 h-[1px] w-[52px] bg-primary;
@@ -55,6 +64,9 @@
   }
   .chapter-heading {
     @apply lg:max-w-[250px];
+  }
+  .chapter-heading > h3 {
+    @apply uppercase;
   }
   .chapter-content {
     @apply space-y-[15px] overflow-y-scroll pt-2 lg:w-[560px] lg:pt-0;

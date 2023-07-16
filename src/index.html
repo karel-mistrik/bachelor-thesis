@@ -128,7 +128,10 @@
       class="flex h-screen w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll"
     >
       <!-- LANDING PAGE -->
-      <section id="landingPage" class="flex items-center justify-center">
+      <section
+        id="landingPage"
+        class="relative flex items-center justify-center"
+      >
         <div class="relative">
           <div
             class="absolute bottom-0 left-0 top-0 m-auto h-[130%] border-2 border-secondary lg:border-4"
@@ -137,6 +140,71 @@
             Jan <br />
             Mistrík
           </h1>
+        </div>
+        <div
+          class="absolute bottom-10 left-1/2 mx-auto -translate-x-1/2 lg:bottom-20"
+        >
+          <span class="navigation-hint xl:hidden">
+            pro navigaci použijte horizontální posun prstem po displeji
+          </span>
+
+          <span class="navigation-hint hidden xl:block">
+            pro navigaci použijte šipky, nebo horizontální pohyb dvěma prsty na
+            touchpadu
+          </span>
+        </div>
+      </section>
+
+      <section id="legend" class="relative flex items-center justify-center">
+        <div class="flex flex-col gap-5">
+          <div class="legend-item flex">
+            <div class="mr-4">Kapitola:</div>
+            <h3 class="uppercase">Kapitola</h3>
+          </div>
+
+          <div class="legend-item hidden xl:flex">
+            <div class="mr-4">Odkaz na kapitolu:</div>
+            <div class="desktop-navigation-example">Odkaz</div>
+          </div>
+
+          <div class="legend-item flex">
+            <div class="mr-4">Podkapitola:</div>
+            <h3>Podkapitola</h3>
+          </div>
+
+          <div class="legend-item flex">
+            <div class="mr-4">Odkaz na podkapitolu:</div>
+            <h4>Odkaz</h4>
+          </div>
+
+          <div class="legend-item flex xl:hidden">
+            <div class="mr-4">Otevřít navigaci:</div>
+            <img src="../assets/menu-open.svg" alt="menu toggle circle" />
+          </div>
+
+          <div class="legend-item flex xl:hidden">
+            <div class="mr-4">Zavřít navigaci:</div>
+            <img src="../assets/menu-close.svg" alt="menu toggle circle" />
+          </div>
+
+          <div class="legend-item flex">
+            <div class="mr-4">Indikátor pro posun obsahu dolů-nahoru:</div>
+            <div>
+              <div class="w-7 border"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-10 left-1/2 mx-auto -translate-x-1/2 lg:bottom-20"
+        >
+          <span class="navigation-hint xl:hidden">
+            pro navigaci použijte horizontální posun prstem po displeji
+          </span>
+
+          <span class="navigation-hint hidden xl:block">
+            pro navigaci použijte šipky, nebo horizontální pohyb dvěma prsty na
+            touchpadu
+          </span>
         </div>
       </section>
 
