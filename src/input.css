@@ -33,7 +33,7 @@
     @apply font-inter text-text;
   }
   section {
-    @apply flex h-screen w-full shrink-0 snap-start flex-col bg-background p-10 lg:flex-row lg:justify-center lg:gap-10 lg:py-[180px] xl:[&:not(:first-child)]:pt-[10rem];
+    @apply flex h-screen w-full shrink-0 snap-start flex-col bg-background p-10 transition duration-1000 lg:flex-row lg:justify-center lg:gap-10 lg:py-[180px] xl:[&:not(:first-child)]:pt-[10rem];
   }
 }
 

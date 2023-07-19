@@ -62,25 +62,35 @@ let options = {
   rootMargin: "0px",
   threshold: 0,
 };
+let optionsSection = {
+  rootMargin: "-100px",
+  threshold: 0,
+};
 
-let callback = (entries) => {
+let callbackSection = (entries) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting && entry.target.innerHTML) {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
       headingsNav.forEach((nav) => {
-        if (nav.id.includes(entry.target.parentElement.parentElement.id)) {
+        if (nav.id.includes(entry.target.id)) {
           nav.style.color = "red";
         } else {
           nav.style.color = "black";
         }
       });
+    } else {
+      entry.target.style.opacity = 0;
     }
   });
 };
 
-let observer = new IntersectionObserver(callback, options);
+let observerSections = new IntersectionObserver(
+  callbackSection,
+  optionsSection
+);
 
-headings.forEach((heading) => {
-  observer.observe(heading);
+document.querySelectorAll("section").forEach((seciton) => {
+  observerSections.observe(seciton);
 });
 
 contents.forEach((content) => {
