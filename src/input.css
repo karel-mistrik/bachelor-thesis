@@ -19,12 +19,11 @@
   h4 {
     @apply cursor-pointer font-gelasio text-subchapter transition-colors duration-300 hover:text-secondary;
   }
-
   nav {
     @apply font-gelasio text-navigation-mobile uppercase xl:text-navigation;
   }
   li {
-    @apply relative cursor-pointer transition-colors xl:text-center;
+    @apply relative cursor-pointer transition xl:text-center;
   }
   a {
     @apply duration-300 hover:text-secondary;
@@ -79,10 +78,13 @@
     @apply grid-auto-rows-max-content grid max-h-full snap-y snap-mandatory grid-cols-2 gap-1 overflow-y-scroll lg:max-w-[1000px];
   }
   .chapter-gallery > .chapter-gallery-image {
-    @apply h-full snap-center overflow-hidden;
+    @apply relative h-full snap-center overflow-hidden;
   }
   .chapter-gallery > .chapter-gallery-image > img {
-    @apply h-full w-full object-contain;
+    @apply h-full w-full object-contain transition xl:grayscale xl:hover:grayscale-0;
+  }
+  .chapter-gallery-image-description {
+    @apply absolute bottom-0 left-0 w-full bg-primary py-1 text-center text-background;
   }
   .chapter-content > .list {
     @apply space-y-[10px];
@@ -92,5 +94,22 @@
   }
   .list-item {
     @apply relative pl-[20px] before:absolute before:-top-[1px] before:left-0 before:block before:content-['※'];
+  }
+
+  .chapter-content::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .chapter-content::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .chapter-content::-webkit-scrollbar-thumb {
+    background: black;
+    cursor: pointer;
+  }
+
+  .chapter-content::-webkit-scrollbar-thumb:hover {
+    background: red;
   }
 }

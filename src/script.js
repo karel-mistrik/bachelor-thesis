@@ -1,11 +1,7 @@
 const navToggleOpen = document.querySelector("#navToggleOpen");
 const navToggleClose = document.querySelector("#navToggleClose");
 const naviagtionScreenItems = document.querySelectorAll("#navigationScreen a");
-const galleryImages = document.querySelectorAll(".chapter-gallery > img");
-const imagePreview = document.querySelector("#imagePreview");
 const navigationScreen = document.querySelector("#navigationScreen");
-const sections = document.querySelector("section");
-const headings = document.querySelectorAll(".chapter-heading > h3");
 const headingsNav = document.querySelectorAll("nav > ul > li");
 const contents = document.querySelectorAll(".chapter-content");
 
@@ -58,10 +54,6 @@ const scrollAt = (targetEl) => {
   textElement.scrollIntoView({ behavior: "smooth" });
 };
 
-let options = {
-  rootMargin: "0px",
-  threshold: 0,
-};
 let optionsSection = {
   rootMargin: "-100px",
   threshold: 0,
@@ -73,8 +65,12 @@ let callbackSection = (entries) => {
       entry.target.style.opacity = 1;
       headingsNav.forEach((nav) => {
         if (nav.id.includes(entry.target.id)) {
+          if (window.innerWidth >= 1280) {
+            nav.style.transform = "translateY(10px)";
+          }
           nav.style.color = "red";
         } else {
+          nav.style.transform = "translateY(0)";
           nav.style.color = "black";
         }
       });
@@ -93,39 +89,8 @@ document.querySelectorAll("section").forEach((seciton) => {
   observerSections.observe(seciton);
 });
 
-contents.forEach((content) => {
-  if (content.clientHeight < content.scrollHeight) {
-    if (content.scrollTop === 0) {
-      content.style.borderBottom = "2px solid black";
-    }
-  }
-});
-
-contents.forEach((content) => {
-  content.addEventListener("scroll", () => {
-    if (content.clientHeight < content.scrollHeight) {
-      if (content.scrollTop === 0) {
-        content.style.borderTop = "0 solid black";
-        content.style.borderBottom = "2px solid black";
-      } else if (
-        content.scrollHeight - content.clientHeight ===
-        content.scrollTop
-      ) {
-        content.style.borderTop = "2px solid black";
-        content.style.borderBottom = "0 solid black";
-      } else if (
-        content.scrollTop !== 0 &&
-        content.scrollHeight - content.clientHeight !== content.scrollTop
-      ) {
-        content.style.borderTop = "2px solid black";
-        content.style.borderBottom = "2px solid black";
-      }
-    }
-  });
-});
-
 window.ityped.init(document.querySelector(".welocme"), {
-  strings: ["Vítejte!"],
+  strings: ["Jan"],
   loop: false,
   typeSpeed: 150,
   backSpeed: 100,
@@ -134,7 +99,7 @@ window.ityped.init(document.querySelector(".welocme"), {
 });
 
 window.ityped.init(document.querySelector(".welcome-intro"), {
-  strings: ["Na stránkách Jana Mistríka"],
+  strings: ["Mistrík"],
   loop: false,
   typeSpeed: 150,
   backSpeed: 100,
