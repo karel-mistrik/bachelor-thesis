@@ -8,10 +8,10 @@
   }
 
   h1 {
-    @apply font-gelasio text-title-mobile leading-title lg:text-title;
+    @apply font-gelasio text-title-mobile leading-title xl:text-title;
   }
   h2 {
-    @apply font-gelasio text-title-mobile leading-title;
+    @apply font-gelasio text-chapter leading-title xl:text-title-mobile;
   }
   h3 {
     @apply font-gelasio text-chapter;
@@ -19,6 +19,7 @@
   h4 {
     @apply cursor-pointer font-gelasio text-subchapter transition-colors duration-300 hover:text-secondary;
   }
+
   nav {
     @apply font-gelasio text-navigation-mobile uppercase xl:text-navigation;
   }
@@ -41,7 +42,10 @@
     grid-auto-rows: max-content;
   }
   .navigation-hint {
-    @apply font-inter text-navigation;
+    @apply text-center font-inter text-navigation;
+  }
+  .contact-link {
+    @apply cursor-pointer font-inter italic underline decoration-secondary transition-colors duration-300 hover:text-secondary hover:decoration-primary;
   }
   .legend-item {
     @apply items-baseline;

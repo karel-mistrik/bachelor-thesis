@@ -1,14 +1,13 @@
 const navToggleOpen = document.querySelector("#navToggleOpen");
 const navToggleClose = document.querySelector("#navToggleClose");
-
 const naviagtionScreenItems = document.querySelectorAll("#navigationScreen a");
-
 const galleryImages = document.querySelectorAll(".chapter-gallery > img");
 const imagePreview = document.querySelector("#imagePreview");
-
 const navigationScreen = document.querySelector("#navigationScreen");
-
 const sections = document.querySelector("section");
+const headings = document.querySelectorAll(".chapter-heading > h3");
+const headingsNav = document.querySelectorAll("nav > ul > li");
+const contents = document.querySelectorAll(".chapter-content");
 
 navToggleOpen.addEventListener("click", () => {
   navigationScreen.classList.remove("top-full");
@@ -54,39 +53,10 @@ const scrollToDiv = (targetEl, targetContainer) => {
   });
 };
 
-const scrollAr = (targetEl) => {
+const scrollAt = (targetEl) => {
   const textElement = document.getElementById(targetEl);
   textElement.scrollIntoView({ behavior: "smooth" });
 };
-
-window.addEventListener("wheel", function (e) {
-  horizontal = e.currentTarget.scrollLeft;
-  vertical = e.currentTarget.scrollTop;
-});
-
-galleryImages.forEach((image) => {
-  image.addEventListener("click", async (e) => {
-    imagePreview.style.backgroundImage = `url("${e.target.src}")`;
-    imagePreview.classList.remove("scale-0");
-    imagePreview.classList.add("scale-50");
-  });
-});
-
-imagePreview.addEventListener("click", () => {
-  imagePreview.classList.remove("scale-50");
-  imagePreview.classList.add("scale-0");
-});
-
-const loadImg = function (img, url) {
-  return new Promise((resolve, reject) => {
-    img.style.backgroundImage = `url("${url}")`;
-    img.onload = () => resolve(img);
-    img.onerror = () => reject(img);
-  });
-};
-
-const headings = document.querySelectorAll(".chapter-heading > h3");
-const headingsNav = document.querySelectorAll("nav > ul > li");
 
 let options = {
   rootMargin: "0px",
@@ -113,23 +83,6 @@ headings.forEach((heading) => {
   observer.observe(heading);
 });
 
-// GLOBAL PROGRESS BAR
-// const scrollContainer = document.querySelector("main");
-
-// scrollContainer.addEventListener("scroll", (evt) => {
-//   console.log(
-//     scrollContainer.scrollLeft /
-//       (scrollContainer.scrollWidth - scrollContainer.clientWidth)
-//   );
-//   document.querySelector("#progressBar").style.width = `${
-//     (scrollContainer.scrollLeft /
-//       (scrollContainer.scrollWidth - scrollContainer.clientWidth)) *
-//     100
-//   }%`;
-// });
-
-const contents = document.querySelectorAll(".chapter-content");
-
 contents.forEach((content) => {
   if (content.clientHeight < content.scrollHeight) {
     if (content.scrollTop === 0) {
@@ -139,7 +92,7 @@ contents.forEach((content) => {
 });
 
 contents.forEach((content) => {
-  content.addEventListener("scroll", (evt) => {
+  content.addEventListener("scroll", () => {
     if (content.clientHeight < content.scrollHeight) {
       if (content.scrollTop === 0) {
         content.style.borderTop = "0 solid black";
@@ -159,4 +112,23 @@ contents.forEach((content) => {
       }
     }
   });
+});
+
+window.ityped.init(document.querySelector(".welocme"), {
+  strings: ["Vítejte!"],
+  loop: false,
+  typeSpeed: 150,
+  backSpeed: 100,
+  backDelay: 5000,
+  cursorChar: null,
+});
+
+window.ityped.init(document.querySelector(".welcome-intro"), {
+  strings: ["Na stránkách Jana Mistríka"],
+  loop: false,
+  typeSpeed: 150,
+  backSpeed: 100,
+  backDelay: 5000,
+  cursorChar: null,
+  startDelay: 2500,
 });

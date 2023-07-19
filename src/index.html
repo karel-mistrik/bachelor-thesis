@@ -11,17 +11,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../dist/output.css" rel="stylesheet" />
+    <script src="https://unpkg.com/ityped@1.0.3"></script>
     <script src="./script.js" defer></script>
     <title>Jan Mistrík</title>
   </head>
   <body class="overflow-y-hidden">
-    <!-- <div
-      id="progressBarContainer"
-      class="absolute left-0 right-0 top-0 h-1 w-full bg-primary"
-    >
-      <div id="progressBar" class="h-full w-0 bg-secondary"></div>
-    </div> -->
-
     <div
       id="imagePreview"
       class="absolute left-0 right-0 top-0 z-50 m-auto h-full scale-0 bg-contain bg-center bg-no-repeat transition-all duration-500"
@@ -31,39 +25,39 @@
     <nav class="fixed left-0 right-0 top-10 mx-auto hidden xl:block">
       <ul class="relative flex items-center justify-center space-x-7">
         <li id="scienceMajorLink">
-          <a onclick="scrollAr('scienceMajor')">VĚDECKÉ ZAMĚŘENÍ</a>
+          <a onclick="scrollAt('scienceMajor')">VĚDECKÉ ZAMĚŘENÍ</a>
         </li>
 
         <li id="educationLink">
-          <a onclick="scrollAr('education')">VZDĚLÁNÍ</a>
+          <a onclick="scrollAt('education')">VZDĚLÁNÍ</a>
         </li>
 
         <li id="employmentLink">
-          <a onclick="scrollAr('employment')">ZAMĚSTNÁNÍ</a>
+          <a onclick="scrollAt('employment')">ZAMĚSTNÁNÍ</a>
         </li>
 
         <li id="achivementsLink">
-          <a onclick="scrollAr('achivements')"
+          <a onclick="scrollAt('achivements')"
             >DOSAŽENÉ ÚSPĚCHY VYBRANÉ AKTIVITY</a
           >
         </li>
 
         <li id="projectLink">
-          <a onclick="scrollAr('project')">ÚČAST NA PROJEKTECH</a>
+          <a onclick="scrollAt('project')">ÚČAST NA PROJEKTECH</a>
         </li>
 
         <li id="refereeLink">
-          <a onclick="scrollAr('referee')"
+          <a onclick="scrollAt('referee')"
             >OPONENTNÍ POSUDKY ÚČAST V KOMISÍCH</a
           >
         </li>
 
         <li id="galleryLink">
-          <a onclick="scrollAr('gallery')">GALERIE</a>
+          <a onclick="scrollAt('gallery')">GALERIE</a>
         </li>
 
         <li id="contactLink">
-          <a onclick="scrollAr('contact')">KONTAKT</a>
+          <a onclick="scrollAt('contact')">KONTAKT</a>
         </li>
       </ul>
     </nav>
@@ -76,32 +70,32 @@
       <nav>
         <ul class="ml-10 space-y-3 lg:ml-16 lg:space-y-6">
           <li id="scienceMajorMobileLink">
-            <a onclick="scrollAr('scienceMajor')">VĚDECKÉ ZAMĚŘENÍ</a>
+            <a onclick="scrollAt('scienceMajor')">VĚDECKÉ ZAMĚŘENÍ</a>
           </li>
           <li id="educationMobileLink">
-            <a onclick="scrollAr('education')">VZDĚLÁNÍ</a>
+            <a onclick="scrollAt('education')">VZDĚLÁNÍ</a>
           </li>
           <li id="employmentMobileLink">
-            <a onclick="scrollAr('employment')">ZAMĚSTNÁNÍ</a>
+            <a onclick="scrollAt('employment')">ZAMĚSTNÁNÍ</a>
           </li>
           <li id="achivementsMobileLink">
-            <a onclick="scrollAr('achivements')"
+            <a onclick="scrollAt('achivements')"
               >DOSAŽENÉ ÚSPĚCHY VYBRANÉ AKTIVITY</a
             >
           </li>
           <li id="projectMobileLink">
-            <a onclick="scrollAr('project')">ÚČAST NA PROJEKTECH</a>
+            <a onclick="scrollAt('project')">ÚČAST NA PROJEKTECH</a>
           </li>
           <li id="refereeMobileLink">
-            <a onclick="scrollAr('referee')"
+            <a onclick="scrollAt('referee')"
               >OPONENTNÍ POSUDKY ÚČAST V KOMISÍCH</a
             >
           </li>
           <li id="galleryMobileLink">
-            <a onclick="scrollAr('gallery')">GALERIE</a>
+            <a onclick="scrollAt('gallery')">GALERIE</a>
           </li>
           <li id="contactMobileLink">
-            <a onclick="scrollAr('contact')">KONTAKT</a>
+            <a onclick="scrollAt('contact')">KONTAKT</a>
           </li>
         </ul>
       </nav>
@@ -132,31 +126,35 @@
         id="landingPage"
         class="relative flex items-center justify-center"
       >
-        <div class="relative">
-          <div
-            class="absolute bottom-0 left-0 top-0 m-auto h-[130%] border-2 border-secondary lg:border-4"
-          ></div>
-          <h1 class="ml-6 lg:ml-10">
-            Jan <br />
-            Mistrík
-          </h1>
+        <div class="relative text-center">
+          <h1
+            class="welocme mb-10 underline decoration-secondary xl:ml-10"
+          ></h1>
+          <h2 class="welcome-intro xl:ml-10"></h2>
         </div>
         <div
           class="absolute bottom-10 left-1/2 mx-auto -translate-x-1/2 lg:bottom-20"
         >
-          <span class="navigation-hint xl:hidden">
+          <div class="navigation-hint xl:hidden">
             pro navigaci použijte horizontální posun prstem po displeji
-          </span>
+          </div>
 
-          <span class="navigation-hint hidden xl:block">
+          <div class="navigation-hint hidden xl:block">
             pro navigaci použijte šipky, nebo horizontální pohyb dvěma prsty na
             touchpadu
-          </span>
+          </div>
         </div>
       </section>
 
-      <section id="legend" class="relative flex items-center justify-center">
-        <div class="flex flex-col gap-5">
+      <section
+        id="legend"
+        class="relative flex flex-row items-center justify-center"
+      >
+        <div>
+          <h3 class="uppercase">Prvky webu</h3>
+          <div class="chapter-underline"></div>
+        </div>
+        <div class="ml-10 flex flex-col gap-5 lg:ml-0">
           <div class="legend-item flex">
             <div class="mr-4">Kapitola:</div>
             <h3 class="uppercase">Kapitola</h3>
@@ -196,16 +194,7 @@
         </div>
         <div
           class="absolute bottom-10 left-1/2 mx-auto -translate-x-1/2 lg:bottom-20"
-        >
-          <span class="navigation-hint xl:hidden">
-            pro navigaci použijte horizontální posun prstem po displeji
-          </span>
-
-          <span class="navigation-hint hidden xl:block">
-            pro navigaci použijte šipky, nebo horizontální pohyb dvěma prsty na
-            touchpadu
-          </span>
-        </div>
+        ></div>
       </section>
 
       <!-- SCIENCE MAJOR PAGE -->
@@ -857,7 +846,7 @@
       <!-- GALLERY PAGE -->
       <section id="gallery">
         <div class="chapter-heading">
-          <h3>Gallery</h3>
+          <h3>Gallerie</h3>
           <div class="chapter-underline"></div>
         </div>
         <div class="chapter-gallery" id="gallery-container">
@@ -886,10 +875,30 @@
           <div class="chapter-underline"></div>
         </div>
         <div class="chapter-content">
-          Centrum materiálů a nanotechnologí & Ústav aplikované fyziky a
-          matematiky Fakulta chemicko-technologická, Univerzita Pardubice
-          Studentská 95, 532 10, Pardubice, Česká republika +420-466-037-409,
-          +420-466-036-024 jan.mistrik@upce.cz
+          <div>
+            <h3 class="mb-1">Odkazy na profil</h3>
+            <div class="flex flex-col">
+              <a
+                href="https://www.researchgate.net/profile/Jan-Mistrik"
+                class="contact-link"
+                >Research Gate</a
+              >
+              <a
+                href="https://www.linkedin.com/in/jan-mistrik-b092b97b/"
+                class="contact-link"
+              >
+                Linkedin
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="mb-1">Pracoviště</h3>
+            Centrum materiálů a nanotechnologí & Ústav aplikované fyziky a
+            matematiky Fakulta chemicko-technologická, Univerzita Pardubice
+            <br />
+            Studentská 95, 532 10, Pardubice, Česká republika
+            <br />+420-466-037-409, +420-466-036-024 <br />jan.mistrik@upce.cz
+          </div>
         </div>
       </section>
     </main>

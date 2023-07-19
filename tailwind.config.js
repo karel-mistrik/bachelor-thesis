@@ -22,7 +22,17 @@ module.exports = {
     },
     extend: {
       lineHeight: {
-        title: "89.6%",
+        title: "100%",
+      },
+      keyframes: {
+        blink: {
+          "0%": { borderColor: "transparent" },
+          "50%": { borderColor: "#FF0000" },
+          "100%": { borderColor: "transparent" },
+        },
+      },
+      animation: {
+        blink: "blink 2s ease-in infinite",
       },
     },
   },
